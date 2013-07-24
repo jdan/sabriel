@@ -11,7 +11,7 @@ Template.cardEntry.events({
 
       // Reset the class
       $('.card-entry').removeClass(['positive', 'neutral', 'negative'].join(' '))
-      
+
       Meteor.call('card', card, function (error, id) {
         if (error)
           alert(error.reason)
