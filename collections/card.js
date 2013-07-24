@@ -9,7 +9,6 @@ Cards.allow({
 Meteor.methods({
   card: function (cardAttributes) {
     var user = Meteor.user()
-    var type = 'positive'
 
     // ensure the user is logged in
     if (!user)
@@ -19,13 +18,12 @@ Meteor.methods({
     if (/^\s*$/.test(cardAttributes.content))
       throw new Meteor.Error(422, "Please fill in a card");
 
-    if (/^:\(\s+/.test(cardAttributes.content)) {
-      type = 'negative'
-    } else if (/^:\)\s+/.test(cardAttributes.content)) {
-      type = 'positive'
-    } else if (/^:\|\s+/.test(cardAttributes.content)) {
-      type = 'neutral'
-    }
+    // Get the reaction from content (positive|neutral|negative)
+    var type = reaction(cardAttributes.content)
+
+    // ensure a type has been filled out
+    if (!type)
+      throw new Meteor.Error(422, "Please preface your message with a reaction.")
 
     var extract = cardAttributes.content.match(/(?:\:[\(\)|]\s+)(.*)/)
 
