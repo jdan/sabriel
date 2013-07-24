@@ -1,0 +1,26 @@
+button {
+  border: inherit;
+  box-shadow: inherit;
+  cursor: pointer;
+  cursor: hand;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  margin: inherit;
+  padding: inherit;
+}
+
+button.login {
+  background-color: #618B99;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.2;
+  padding: 14px 18px;
+}
+
+button.login:hover {
+  background-color: #90adb7;
+}
