@@ -5,7 +5,7 @@ body {
 }
 
 .content {
-  width: 800px;
+  width: 1010px;
   margin: 60px auto 0;
 }
 
@@ -15,7 +15,7 @@ body {
 }
 
 .card-column {
-  width: 250px;
+  width: 320px;
   margin: 5px;
   height: 500px;
   float: left;
@@ -23,7 +23,26 @@ body {
 }
 
 .card {
-  border-radius: 10px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+
   border: 1px solid #000;
-  margin: 5px 0;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.negative .card {
+  border-color: #ac3945;
+  background-color: #d7888c;
+}
+
+.neutral .card {
+  border-color: #ffd305;
+  background-color: #eee381;
+}
+
+.positive .card {
+  border-color: #6e8e2f;
+  background-color: #a7ee86;
 }
