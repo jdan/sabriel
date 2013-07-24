@@ -1,0 +1,29 @@
+body {
+  color: #222;
+  background-color: #f6f6f6;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.content {
+  width: 800px;
+  margin: 60px auto 0;
+}
+
+.card-field {
+  padding: 10px;
+  height: 600px;
+}
+
+.card-column {
+  width: 250px;
+  margin: 5px;
+  height: 500px;
+  float: left;
+  overflow-y: scroll;
+}
+
+.card {
+  border-radius: 10px;
+  border: 1px solid #000;
+  margin: 5px 0;
+}
