@@ -1,6 +1,9 @@
 <template name="cardList">
   <h1>Cards</h1>
   <div class="card-field">
+
+    {{> cardEntry}}
+
     <div class="card-column negative">
       {{#each negativeCards}}
         {{> card}}
