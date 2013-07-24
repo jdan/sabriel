@@ -1,3 +1,5 @@
+@import "transition.lessimport";
+
 body {
   color: #222;
   background-color: #f6f6f6;
@@ -15,10 +17,7 @@ body {
 }
 
 .card-field .card {
-  -webkit-transition: background-color 0.3s ease-out;
-     -moz-transition: background-color 0.3s ease-out;
-       -o-transition: background-color 0.3s ease-out;
-          transition: background-color 0.3s ease-out;
+  .transition(background-color 0.3s ease-out);
 }
 
 .card-entry, .card-entry input {
