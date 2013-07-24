@@ -14,8 +14,20 @@ body {
   height: 600px;
 }
 
-.card-entry {
+.card-field .card {
+  -webkit-transition: background-color 0.3s ease-out;
+     -moz-transition: background-color 0.3s ease-out;
+       -o-transition: background-color 0.3s ease-out;
+          transition: background-color 0.3s ease-out;
+}
+
+.card-entry, .card-entry input {
   padding: 5px;
+  font-size: 24px;
+}
+
+.card-entry input {
+  width: 700px;
 }
 
 .card-column {
