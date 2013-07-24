@@ -2,22 +2,8 @@ Template.cardEntry.events({
   'submit form': function (e) {
     e.preventDefault()
 
-    var content = $(e.target).find('[name=content]').val()
-    var type = 'positive'
-
-    if (/^:\(\s+/.test(content)) {
-      type = 'negative'
-    } else if (/^:\)\s+/.test(content)) {
-      type = 'positive'
-    } else if (/^:\|\s+/.test(content)) {
-      type = 'neutral'
-    }
-
-    var extract = content.match(/(?:\:[\(\)|]\s+)(.*)/)
-
-    card = {
-      content: (extract && extract[1]) ? extract[1] : content,
-      type: type
+    var card = {
+      content: $(e.target).find('[name=content]').val()
     }
 
     if (!/^\s*$/.test(card.content)) {
@@ -28,5 +14,6 @@ Template.cardEntry.events({
           alert(error.reason)
       })
     }
+
   }
 })
