@@ -11,7 +11,6 @@ Template.cardEntry.events({
 
       // Reset the class
       $('.card-entry').removeClass(['positive', 'neutral', 'negative'].join(' '))
-                      .addClass('positive')
       
       Meteor.call('card', card, function (error, id) {
         if (error)
@@ -26,6 +25,8 @@ Template.cardEntry.events({
 
     // Change the entry field to have the appropriate class
     $('.card-entry').removeClass(['positive', 'neutral', 'negative'].join(' '))
-                    .addClass(type)
+    if (type) {
+      $('.card-entry').addClass(type)
+    }
   }
 })

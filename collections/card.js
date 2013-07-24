@@ -21,6 +21,10 @@ Meteor.methods({
     // Get the reaction from content (positive|neutral|negative)
     var type = reaction(cardAttributes.content)
 
+    // ensure a type has been filled out
+    if (!type)
+      throw new Meteor.Error(422, "Please preface your message with a reaction.")
+
     var extract = cardAttributes.content.match(/(?:\:[\(\)|]\s+)(.*)/)
 
     // build the message
