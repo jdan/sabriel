@@ -25,11 +25,13 @@ Meteor.methods({
     if (!type)
       throw new Meteor.Error(422, "Please preface your message with a reaction.")
 
-    var extract = cardAttributes.content.match(/(?:\:[\(\)|]\s+)(.*)/)
+    var extract = cardAttributes.content.replace(/(\:[\(\)\|])/g, '')
+                                        .replace(/^\s+/g, '')
+                                        .replace(/\s+$/g, '')
 
     // build the message
     var card = {
-      content: (extract && extract[1]) ? extract[1] : cardAttributes.content,
+      content: extract,
       type: type,
       userId: user._id,
       submitted: new Date().getTime()
