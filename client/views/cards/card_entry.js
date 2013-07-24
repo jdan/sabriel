@@ -17,22 +17,16 @@ Template.cardEntry.events({
 
     card = {
       content: (extract && extract[1]) ? extract[1] : content,
-      type: type,
-      userId: Meteor.userId(),
-      submitted: new Date()
+      type: type
     }
 
     if (!/^\s*$/.test(card.content)) {
       $(e.target).find('[name=content]').val('')
       
-      Cards.insert(card)
-
-      /*
-      Meteor.call('message', message, function (error, id) {
+      Meteor.call('card', card, function (error, id) {
         if (error)
           alert(error.reason)
       })
-      */
     }
   }
 })
