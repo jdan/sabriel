@@ -5,6 +5,5 @@
 
 autopublish
 preserve-inputs
-accounts-ui
 accounts-google
 less
