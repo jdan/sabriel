@@ -7,3 +7,4 @@ autopublish
 preserve-inputs
 accounts-google
 less
+coffeescript
