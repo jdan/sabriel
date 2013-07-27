@@ -1,18 +1,23 @@
 @import "transition.lessimport";
+@import "color.lessimport";
 
 body {
-  color: #222;
-  background-color: #f6f6f6;
+  color: @body-text;
+  background-color: @background;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+.buttonBar {
+  float: right;
+}
+
 .content {
-  width: 1010px;
+  width: 960px;
+  padding: 10px;
   margin: 60px auto 0;
 }
 
 .card-field {
-  padding: 10px;
   height: 600px;
 }
 
@@ -30,7 +35,7 @@ body {
 }
 
 .card-column {
-  width: 320px;
+  width: 310px;
   margin: 5px;
   height: 500px;
   float: left;
@@ -48,20 +53,16 @@ body {
 }
 
 .negative .card {
-  border-color: #ac3945;
-  background-color: #d7888c;
+  border-color: @red-dark;
+  background-color: @red;
 }
 
 .neutral .card {
-  border-color: #ffd305;
-  background-color: #eee381;
-}
-
-.notAnInlineStyle {
-  float: right;
+  border-color: @yellow-dark;
+  background-color: @yellow;
 }
 
 .positive .card {
-  border-color: #6e8e2f;
-  background-color: #a7ee86;
+  border-color: @green-dark;
+  background-color: @green;
 }
