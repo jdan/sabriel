@@ -1,0 +1,10 @@
+@body-text: #222;
+@background: lighten(#E9E5E2, 5%);
+
+
+@red: #e7a9b2;
+@red-dark: #842634;
+@green: #d9e69d;
+@green-dark: #7e9126;
+@yellow: #ffebbf;
+@yellow-dark: #f2a700;
