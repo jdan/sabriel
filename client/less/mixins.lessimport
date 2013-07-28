@@ -1,7 +1,16 @@
+
+// Transitions
 .transition(@transition) {
   -webkit-transition: @transition;
      -moz-transition: @transition;
       -ms-transition: @transition;
        -o-transition: @transition;
           transition: @transition;
+}
+
+// Border radius
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
 }
