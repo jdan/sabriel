@@ -8,10 +8,8 @@ Template.loginButton.events({
       if (err)
         Session.set('errorMessage', err.reason || 'Unknown error');
     })
-  }
-})
+  },
 
-Template.logoutButton.events({
   'click button.logout': function (e) {
     e.preventDefault()
     if (Meteor.user()) Meteor.logout()
