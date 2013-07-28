@@ -18,9 +18,9 @@ Meteor.methods({
 
     // build the message
     var board = {
-      title: extract,
-      creator: user._id,
-      submitted: new Date().getTime()
+      title: extract
+    , creator: user._id
+    , submitted: new Date().getTime()
     }
 
     var boardId = Boards.insert(board)

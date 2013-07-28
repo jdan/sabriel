@@ -35,11 +35,11 @@ Meteor.methods({
 
     // build the message
     var card = {
-        content: extract
-      , type: type
-      , user: new UserBuilder(user)
-      , boardId: cardAttributes.boardId
-      , submitted: new Date().getTime()
+      content: extract
+    , type: type
+    , user: new UserBuilder(user)
+    , boardId: cardAttributes.boardId
+    , submitted: new Date().getTime()
     }
 
     Cards.insert(card)

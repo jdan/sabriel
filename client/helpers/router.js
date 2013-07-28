@@ -1,24 +1,25 @@
 Meteor.Router.add({
-  '/': 'boardList',
+  '/': 'boardList'
 
-  '/boards/:_id': {
-    to: 'boardPage',
-    and: function (id) {
-      Session.set('currentBoardId', id);
+, '/boards/:_id': {
+    to: 'boardPage'
+  , and: function (id) {
+      Session.set('currentBoardId', id)
     }
-  },
+  }
 
-  '/new': 'boardEntry'
-});
+, '/new': 'boardEntry'
+
+})
 
 Meteor.Router.filters({
   'requireLogin': function (page) {
     if (Meteor.user()) {
-      return page;
+      return page
     } else {
-      return 'accessDenied';
+      return 'accessDenied'
     }
   }
-});
+})
 
-Meteor.Router.filter('requireLogin', {only: 'boardEntry'});
+Meteor.Router.filter('requireLogin', {only: 'boardEntry'})
