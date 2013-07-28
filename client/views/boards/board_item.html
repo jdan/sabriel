@@ -1,0 +1,23 @@
+<template name="board">
+  <h1>{{title}}</h1>
+  
+  <div class="card-field">
+    {{> cardEntry}}
+
+    <div class="card-column negative">
+      {{#each negativeCards}}
+        {{> card}}
+      {{/each}}
+    </div>
+    <div class="card-column neutral">
+      {{#each neutralCards}}
+        {{> card}}
+      {{/each}}
+    </div>
+    <div class="card-column positive">
+      {{#each positiveCards}}
+        {{> card}}
+      {{/each}}
+    </div>
+  </div>
+</template>

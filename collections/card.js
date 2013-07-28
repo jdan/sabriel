@@ -18,6 +18,10 @@ Meteor.methods({
     if (/^\s*$/.test(cardAttributes.content))
       throw new Meteor.Error(422, "Please fill in a card")
 
+    // TODO(jordan) verify that the board exists
+    if (!cardAttributes.boardId)
+      throw new Meteor.Error(422, "Please specify a Board ID")
+
     // Get the reaction from content (positive|neutral|negative)
     var type = reaction(cardAttributes.content)
 
@@ -34,9 +38,10 @@ Meteor.methods({
         content: extract
       , type: type
       , user: new UserBuilder(user)
+      , boardId: cardAttributes.boardId
       , submitted: new Date().getTime()
     }
 
     Cards.insert(card)
   }
-});
+})
