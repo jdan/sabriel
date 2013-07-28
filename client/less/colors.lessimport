@@ -1,7 +1,6 @@
 @body-text: #222;
 @background: #f4f2f1;
 
-
 @red: #e7a9b2;
 @red-dark: #842634;
 @green: #d9e69d;
