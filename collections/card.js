@@ -12,11 +12,11 @@ Meteor.methods({
 
     // ensure the user is logged in
     if (!user)
-      throw new Meteor.Error(401, "You need to login to fill a card");
+      throw new Meteor.Error(401, "You need to login to fill a card")
 
     // ensure the message has content
     if (/^\s*$/.test(cardAttributes.content))
-      throw new Meteor.Error(422, "Please fill in a card");
+      throw new Meteor.Error(422, "Please fill in a card")
 
     // Get the reaction from content (positive|neutral|negative)
     var type = reaction(cardAttributes.content)
@@ -31,12 +31,12 @@ Meteor.methods({
 
     // build the message
     var card = {
-      content: extract,
-      type: type,
-      userId: user._id,
-      submitted: new Date().getTime()
-    };
+        content: extract
+      , type: type
+      , user: new UserBuilder(user)
+      , submitted: new Date().getTime()
+    }
 
-    Cards.insert(card);
+    Cards.insert(card)
   }
 });
