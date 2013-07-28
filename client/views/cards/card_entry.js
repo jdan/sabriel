@@ -3,7 +3,8 @@ Template.cardEntry.events({
     e.preventDefault()
 
     var card = {
-      content: $(e.target).find('[name=content]').val()
+      content: $(e.target).find('[name=content]').val(),
+      boardId: Session.get('currentBoardId')
     }
 
     if (!/^\s*$/.test(card.content)) {
