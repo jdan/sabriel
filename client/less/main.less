@@ -17,6 +17,10 @@ body {
   margin: 60px auto 0;
 }
 
+.clear {
+  clear: both;
+}
+
 .card-field {
   height: 600px;
 }
@@ -32,6 +36,10 @@ body {
 
 .card-entry input {
   width: 700px;
+  border: none;
+  border-bottom: 2px solid @body-text;
+  background-color: inherit;
+  outline: none;
 }
 
 .card-column {
@@ -43,26 +51,41 @@ body {
 }
 
 .card {
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-
+  background-color: white;
   border: 1px solid #000;
+  .border-radius(3px);
   margin: 10px 0;
-  padding: 10px;
+}
+
+.card-content {
+  margin: 10px 15px;
+}
+
+.card-stripe {
+  height: 5px;
+  width: 100%;
+}
+
+.negative .card-stripe {
+  background-color: @red-dark;
+}
+
+.neutral .card-stripe {
+  background-color: @yellow-dark;
+}
+
+.positive .card-stripe {
+  background-color: @green-dark;
 }
 
 .negative .card {
   border-color: @red-dark;
-  background-color: @red;
 }
 
 .neutral .card {
   border-color: @yellow-dark;
-  background-color: @yellow;
 }
 
 .positive .card {
   border-color: @green-dark;
-  background-color: @green;
 }

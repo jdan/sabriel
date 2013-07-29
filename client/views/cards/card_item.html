@@ -1,9 +1,15 @@
 <template name="card">
   <div class="card">
-    <img class="avatar" src="{{ownerAvatar}}">
-    <p>{{content}}</p>
-    {{#if isOwnCard}}
-      <a href="#" class="card-delete">X</a>
-    {{/if}}
+    <div class="card-stripe"></div>
+    <div class="card-content">
+      <div class="avatar-container">
+        <img class="avatar" src="{{ownerAvatar}}">
+      </div>
+      <p>{{content}}</p>
+      {{#if isOwnCard}}
+        <a href="#" class="card-delete">X</a>
+      {{/if}}
+      <div class="clear"></div>
+    </div>
   </div>
 </template>
