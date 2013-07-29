@@ -6,9 +6,9 @@ Meteor.methods({
 
     // ensure the user is logged in
     if (!user)
-      throw new Meteor.Error(401, "You need to login to fill a card")
+      throw new Meteor.Error(401, "You need to login to create a board")
 
-    // ensure the message has content
+    // ensure the board has a title
     if (/^\s*$/.test(boardAttributes.title))
       throw new Meteor.Error(422, "Please enter a board title")
 
@@ -16,10 +16,10 @@ Meteor.methods({
     var extract = boardAttributes.title.replace(/^\s+/g, '')
                                        .replace(/\s+$/g, '')
 
-    // build the message
+    // build the board
     var board = {
       title: extract
-    , creator: user._id
+    , creator: new UserBuilder(user)
     , submitted: new Date().getTime()
     }
 
