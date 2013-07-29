@@ -12,7 +12,7 @@
  */
 UserBuilder = function (user) {
   /* user id */
-  this.userId = user.userId
+  this._id = user._id
 
   /* image url */
   this.picture = user.services.google.picture
