@@ -1,0 +1,8 @@
+<template name="boardList">
+  {{#each boards}}
+    <h1>{{title}}</h1>
+    <a href="{{boardPagePath this}}">Visit</a>
+  {{/each}}
+
+  <a href="{{boardEntryPath}}">New Board</a>
+</template>
