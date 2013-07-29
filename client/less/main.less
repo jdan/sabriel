@@ -17,12 +17,12 @@ body {
   margin: 60px auto 0;
 }
 
-.card-field {
-  height: 600px;
+.clear {
+  clear: both;
 }
 
-.card-field .card {
-  .transition(background-color 0.3s ease-out);
+.card-field {
+  height: 600px;
 }
 
 .card-entry, .card-entry input {
@@ -31,7 +31,43 @@ body {
 }
 
 .card-entry input {
-  width: 700px;
+  width: 760px;
+  border: none;
+  border-bottom: 2px solid @body-text;
+  background-color: inherit;
+  outline: none;
+}
+
+.card-entry .wide {
+  float: left;
+}
+
+.card-entry-status {
+  background-color: rgba(200,200,200,0.8);
+  border: 2px solid gray;
+  float: right;
+  height: 25px;
+  margin: 14px 14px 0 0;
+  width: 25px;
+}
+
+.card-entry-status {
+  .transition(background-color 0.3s ease-out);
+}
+
+.card-entry.negative .card-entry-status {
+  background: @red;
+  border-color: @red-dark;
+}
+
+.card-entry.neutral .card-entry-status {
+  background: @yellow;
+  border-color: @yellow-dark;
+}
+
+.card-entry.positive .card-entry-status {
+  background: @green;
+  border-color: @green-dark;
 }
 
 .card-column {
@@ -39,30 +75,45 @@ body {
   margin: 5px;
   height: 500px;
   float: left;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .card {
-  -webkit-border-radius: 7px;
-  -moz-border-radius: 7px;
-  border-radius: 7px;
-
+  background-color: white;
   border: 1px solid #000;
+  .border-radius(3px);
   margin: 10px 0;
-  padding: 10px;
+}
+
+.card-content {
+  margin: 10px 15px;
+}
+
+.card-stripe {
+  height: 5px;
+  width: 100%;
+}
+
+.negative .card-stripe {
+  background-color: @red-dark;
+}
+
+.neutral .card-stripe {
+  background-color: @yellow-dark;
+}
+
+.positive .card-stripe {
+  background-color: @green-dark;
 }
 
 .negative .card {
   border-color: @red-dark;
-  background-color: @red;
 }
 
 .neutral .card {
   border-color: @yellow-dark;
-  background-color: @yellow;
 }
 
 .positive .card {
   border-color: @green-dark;
-  background-color: @green;
 }
