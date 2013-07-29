@@ -1,3 +1,5 @@
+@import "mixins.lessimport";
+
 button {
   border: inherit;
   box-shadow: inherit;
@@ -12,7 +14,7 @@ button {
 
   &.action {
     background-color: #618B99;
-    border-radius: 5px;
+    .border-radius(3px);
     color: white;
     font-size: 13px;
     font-weight: 600;
