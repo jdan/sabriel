@@ -2,5 +2,8 @@
   <div class="card">
     <img class="avatar" src="{{ownerAvatar}}">
     <p>{{content}}</p>
+    {{#if isOwnCard}}
+      <a href="#" class="card-delete">X</a>
+    {{/if}}
   </div>
 </template>
