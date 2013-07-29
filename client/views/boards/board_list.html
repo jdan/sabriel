@@ -1,7 +1,14 @@
 <template name="boardList">
   {{#each boards}}
-    <h1>{{title}}</h1>
-    <a href="{{boardPagePath this}}">Visit</a>
+    <div class="board-listing">
+      <h1>{{title}}</h1>
+      <div class="participants">
+        {{#each participants}}
+          <img class="avatar" src="{{picture}}" />
+        {{/each}}
+      </div>
+      <a href="{{boardPagePath this}}">Visit</a>
+    </div>
   {{/each}}
 
   <a href="{{boardEntryPath}}">New Board</a>
