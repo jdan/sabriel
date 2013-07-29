@@ -25,21 +25,49 @@ body {
   height: 600px;
 }
 
-.card-field .card {
-  .transition(background-color 0.3s ease-out);
-}
-
 .card-entry, .card-entry input {
   padding: 5px;
   font-size: 24px;
 }
 
 .card-entry input {
-  width: 700px;
+  width: 760px;
   border: none;
   border-bottom: 2px solid @body-text;
   background-color: inherit;
   outline: none;
+}
+
+.card-entry .wide {
+  float: left;
+}
+
+.card-entry-status {
+  background-color: rgba(200,200,200,0.8);
+  border: 2px solid gray;
+  float: right;
+  height: 25px;
+  margin: 14px 14px 0 0;
+  width: 25px;
+}
+
+.card-entry-status {
+  .transition(background-color 0.3s ease-out);
+}
+
+.card-entry.negative .card-entry-status {
+  background: @red;
+  border-color: @red-dark;
+}
+
+.card-entry.neutral .card-entry-status {
+  background: @yellow;
+  border-color: @yellow-dark;
+}
+
+.card-entry.positive .card-entry-status {
+  background: @green;
+  border-color: @green-dark;
 }
 
 .card-column {
@@ -47,7 +75,7 @@ body {
   margin: 5px;
   height: 500px;
   float: left;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .card {
