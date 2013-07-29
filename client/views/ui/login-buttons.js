@@ -6,7 +6,7 @@ Template.loginButton.events({
       { requestPermissions: ['email'] }
 
     , function (err) {
-        if (err) Session.set('errorMessage', err.reason || 'Unknown error');
+        if (err) Session.set('errorMessage', err.reason || 'Unknown error')
       }
     )
   }
