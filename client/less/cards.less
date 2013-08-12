@@ -1,0 +1,63 @@
+@import "mixins.lessimport";
+@import "colors.lessimport";
+
+.card {
+  position: relative;
+}
+
+.card-content {
+  margin-top: 45px;
+  .border-radius(5px);
+  background-color: #fdfdfd;
+  overflow: hidden;
+}
+
+.card-status {
+  height: 5px;
+  background-color: @red;
+}
+
+.card-text {
+  padding: 25px 10px 5px;
+}
+
+.card-avatar {
+  float: left;
+  position: absolute;
+  top: -30px;
+  left: 15px;
+}
+
+.card-attrs, .card-actions {
+  visibility: hidden;
+  float: right;
+  font-size: 80%;
+  padding: 5px;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.card-actions {
+  position: relative;
+
+}
+
+.card:hover .card-attrs,
+.card:hover .card-actions {
+  visibility: visible;
+}
+
+.negative .card-status {
+  background-color: @red-dark;
+}
+
+.neutral .card-status {
+  background-color: @yellow-dark;
+}
+
+.positive .card-status {
+  background-color: @green-dark;
+}
