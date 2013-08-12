@@ -1,0 +1,3 @@
+@contentWidth: 1200px;
+@contentHeight: 600px;
+@columnWidth: @contentWidth / 3 - 20px;

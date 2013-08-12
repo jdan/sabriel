@@ -1,5 +1,6 @@
 @import "mixins.lessimport";
 @import "colors.lessimport";
+@import "sizes.lessimport";
 
 body {
   color: @body-text;
@@ -12,7 +13,7 @@ body {
 }
 
 .content {
-  width: 1200px;
+  width: @contentWidth;
   padding: 10px;
   margin: 20px auto;
 }
@@ -27,7 +28,7 @@ body {
 }
 
 .card-entry input {
-  width: 1000px;
+  width: @contentWidth - 200px; // TODO(*) calculate this
   border: none;
   border-bottom: 2px solid @body-text;
   background-color: inherit;
@@ -67,39 +68,9 @@ body {
 }
 
 .card-column {
-  width: 380px;
+  width: @columnWidth;
   margin: 10px;
-  height: 600px;
+  height: @contentHeight;
   float: left;
   overflow-y: auto;
 }
-/*
-.card-stripe {
-  height: 5px;
-  width: 100%;
-}
-
-.negative .card-stripe {
-  background-color: @red-dark;
-}
-
-.neutral .card-stripe {
-  background-color: @yellow-dark;
-}
-
-.positive .card-stripe {
-  background-color: @green-dark;
-}
-
-.negative .card {
-  border-color: @red-dark;
-}
-
-.neutral .card {
-  border-color: @yellow-dark;
-}
-
-.positive .card {
-  border-color: @green-dark;
-}
-*/
