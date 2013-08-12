@@ -14,3 +14,12 @@
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
+
+// Transform
+.transform(@transformations) {
+  -webkit-transform: @transformations;
+     -moz-transform: @transformations;
+      -ms-transform: @transformations;
+       -o-transform: @transformations;
+          transform: @transformations; 
+}
