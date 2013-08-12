@@ -1,11 +1,24 @@
 <template name="cardEntry">
   <div class="card-entry">
-    <div class="wide">
+    <div class="column double-column left">
       <form>
         <label>New card:</label>
         <input type="text" name="content" />
       </form>
+      <div class="input-hints">
+        <ul>
+          <li>TODO:</li>
+          <li>Put hints here</li>
+          <li>and error messages</li>
+        </ul>
+      </div>
     </div>
-    <div class="card-entry-status"></div>
+    <div class="card-preview column left">
+      {{#with previewCard}}
+        {{> card}}
+      {{/with}}
+      <div class="preview-overlay">preview</div>
+    </div>
   </div>
+  <br class="clear" />
 </template>

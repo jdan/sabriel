@@ -1,3 +1,12 @@
 @contentWidth: 1200px;
-@contentHeight: 600px;
+@contentHeight: 550px;
 @columnWidth: @contentWidth / 3 - 20px;
+
+.column {
+  width: @columnWidth;
+  margin: 10px;
+}
+
+.double-column {
+  width: @columnWidth * 2 + 20px;
+}

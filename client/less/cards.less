@@ -1,5 +1,6 @@
 @import "mixins.lessimport";
 @import "colors.lessimport";
+@import "sizes.lessimport";
 
 .card {
   position: relative;
@@ -14,7 +15,7 @@
 
 .card-status {
   height: 5px;
-  background-color: @red;
+  background-color: @light-gray;
 }
 
 .card-text {
@@ -60,4 +61,36 @@
 
 .positive .card-status {
   background-color: @green-dark;
+}
+
+.card-entry label, .card-entry input {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.card-entry input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid @body-text;
+  background-color: inherit;
+  outline: none;
+}
+
+.card-entry .wide {
+  float: left;
+  width: @columnWidth * 2;
+}
+
+.card-preview {
+  position: relative;
+}
+
+.preview-overlay {
+  opacity: 0.4;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0; right: 10px;
+  //.transform(rotate(-30deg) translate(120px, 60px))
 }

@@ -9,3 +9,5 @@
 
 @yellow: #ffebbf;
 @yellow-dark: #f2a700;
+
+@light-gray: #aaa;
