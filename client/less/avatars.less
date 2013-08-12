@@ -1,12 +1,18 @@
 @import "mixins.lessimport";
 @avatarWidth: 40px;
+@avatarLargeWidth: 52px;
 
 .avatar {
   max-width: @avatarWidth;
-  .border-radius(@avatarWidth / 2);
+  .border-radius(@avatarWidth);
+
+  &.border {
+    //border: 4px solid white;
+    box-shadow: 0 0 3px #aaa;
+  }
 }
 
-.avatar-container {
-  float: left;
-  margin-right: 10px;
+.avatar-large {
+  max-width: @avatarLargeWidth;
+  .border-radius(@avatarLargeWidth);
 }

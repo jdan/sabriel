@@ -1,15 +1,28 @@
 <template name="card">
   <div class="card">
-    <div class="card-stripe"></div>
+    <div class="card-avatar">
+      <img class="avatar avatar-large border" src="{{ownerAvatar}}" />
+    </div>
     <div class="card-content">
-      <div class="avatar-container">
-        <img class="avatar" src="{{ownerAvatar}}">
+      <div class="card-status"></div>
+      <div class="card-attrs">
+        10 <i class="icon-star"></i>
+        4 <i class="icon-comment-alt"></i>
       </div>
-      <p>{{content}}</p>
+      <div class="card-text">
+        <p>{{content}}</p>
+      </div>
       {{#if isOwnCard}}
-        <a href="#" class="card-delete">X</a>
+        <div class="card-actions">
+          <a href="#" class="card-edit">
+            <i class="icon-edit"></i>
+          </a>
+          <a href="#" class="card-delete">
+            <i class="icon-trash"></i>
+          </a>
+        </div>
       {{/if}}
-      <div class="clear"></div>
+
     </div>
   </div>
 </template>
